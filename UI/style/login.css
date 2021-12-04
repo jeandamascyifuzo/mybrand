@@ -3,6 +3,7 @@
     padding: 0;
 }
 body{
+    
     background: #fff;
 }
 nav{
@@ -68,12 +69,21 @@ nav .logo h2{
     margin: 40px auto;
     font-family: "Segoe UI", sans-serif;
     padding: 25px 28px;
-    background: #25252d;
+    /* background: #25252d; */
+    /* background: #eb258fad; */
+    background-image:linear-gradient(to right bottom,#eb258fad,rgba(0, 0, 0, 0.459)),url("https://cdn.pixabay.com/photo/2014/04/23/20/32/round-330809_960_720.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
-
-h2 {
+#main p a{
+text-decoration: none;
+}
+#main h2 {
+    
     text-align: center;
-    font-size: 28px;
+    font-size: 20px;
     margin-bottom: 20px;
     font-weight: 400;
     color: #fff;
@@ -82,27 +92,47 @@ h2 {
     display: block;
     margin-bottom: 20px;
 }
+.input-parent a{
+    text-decoration: none;
+}
+input[type='password']{
+    margin:0px 0px 10px 0px;
+}
 label {
     display: block;
     font-size: 16px;
     margin-bottom: 8px;
     color: #fff;
 }
-.input-parent input {
+/* .input-parent input {
     padding: 10px 8px;
-    width: 100%;
+    width: 70%;
     font-size: 18px;
     background: #fff;
     border: none;
     color: #000;  
+} */
+input[type='text'], input[type='password']{
+width: 100%;
+border-radius:5px;
+height:20px;
+outline: none;
+border-style: none;
+text-align: center;
 }
+
 button {
-    padding: 10px 18px;
+    padding: 5px 9px;
     font-size: 15px;
     background: #0d14d3;
-    width: 100%;
+    margin: 0px 0px 10px 0px;
+    width: 30%;
     color: #fff;
+    border-radius: 50px;
+    outline: none;
+    border-style: none;
     transition: 1s;
+
 }
 button:hover {
     background-color: #FF3D55;
@@ -128,6 +158,15 @@ footer .logo1{
 footer .footer-box{
     display: block;
     flex-basis: 20%;
+}
+.footer-box form{
+    display: flex;
+}
+.footer-box form input[type='email']{
+  border-radius: 5px 0px 0px 5px;
+  text-align: center;
+  outline: none;
+  height:20px;
 }
 footer .footer-box h6{
     font-size: 1rem;
