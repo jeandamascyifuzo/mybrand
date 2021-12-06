@@ -7,6 +7,9 @@ body{
     background: #cdcdcd;
 }
 .header{
+    margin-top:-200px;
+    position: fixed;
+	min-height: 60vh; 
 	width: 100%;
 	background-position: center;
 	background-size: cover;
@@ -45,6 +48,9 @@ nav{
 .menu{
     display: none;
 }
+.main{
+    margin-top:200px;
+}
 .btn{
 	display: inline-block;
 	text-decoration: none;
@@ -74,18 +80,20 @@ nav{
     margin-bottom: 5%;
     text-align: left;
     margin: auto;
-    background: #25252d;
+    /* background: #25252d; */
+    background: rgba(245, 236, 236, 0.842);
+    padding:7px;
+    cursor: pointer;
  }
  .blog-col h3{
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-    font-size:20px;
-    color: #fff;
+    font-size:30px;
 }
 .blog-col p{
-   color: #fff;
-   font-size: 16px;
+   font-size: 20px;
+   padding: 10px;
 }
 .blog-col img{
     width: 100%;
@@ -123,11 +131,15 @@ nav{
   }
   
   input[type=submit] {
-    background-color: #5057FD;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
+    padding: 10px 18px;
+    font-size: 15px;
+    background: #0d14d3;
+    margin: 0px 0px 10px 0px;
+    width: 50%;
+    color: #fff;
+    outline: none;
+    border-style: none;
+    transition: 1s;
     cursor: pointer;
   }
   input[type=submit]:hover {
