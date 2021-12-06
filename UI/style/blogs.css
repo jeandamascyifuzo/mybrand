@@ -93,7 +93,14 @@ nav img{
     color: #5057FD;
 }
 .menu{
-    display: none;
+    position: absolute;
+    top:40px;
+    left: 200px;
+    display:none;
+    width:20px;
+    height:10px;
+    /* float: right; */
+    cursor: pointer;
 }
 .btn{
 	display: inline-block;
@@ -269,19 +276,24 @@ footer .footer-box ul li a:hover{
 
 
 
-@media(max-width: 700px){
+@media(max-width: 360px){
 .header{
     padding-top: 0px;
     padding-bottom: 30px;
 }
 .header .logo{
     font-size: 20px;
-    font-weight: bolder;
-    color: skyblue; 
+    font-weight: bolder; 
     padding-top: 10px;
 }
 .menu{
-    display: flex;
+    position: absolute;
+    top:25px;
+    left:300px;
+    display: block;
+    width:20px;
+    height:10px;
+    cursor: pointer;
 }
 .header .nav-links{
     position: absolute;
@@ -301,10 +313,10 @@ footer .footer-box ul li a:hover{
     display: block;
 }
 .text-box .left img{
-   height: 300px;
-   width: 300px;
+   height: 200px;
+   width: 200px;
    object-fit: cover;
-   margin-left: 30px;
+   margin-left: 70px;
    margin-top: 30px;
    margin-bottom: 25px;
 }
@@ -315,7 +327,7 @@ footer .footer-box ul li a:hover{
   margin-top: 20px;
 }
 .text-box .right h4{
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   margin-bottom: 10px;
   color: #000;
@@ -324,7 +336,7 @@ footer .footer-box ul li a:hover{
 .text-box .right p{
   color: #000;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 10px;
 }
 button [type="submit"]{
     width: 100px;

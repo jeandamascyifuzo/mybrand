@@ -93,7 +93,14 @@ nav img{
     color: #5057FD;
 }
 .menu{
-    display: none;
+    position: absolute;
+    top:40px;
+    left: 200px;
+    display:none;
+    width:20px;
+    height:10px;
+    /* float: right; */
+    cursor: pointer;
 }
 .btn{
 	display: inline-block;
@@ -212,6 +219,7 @@ nav img{
 }
 .skills-col img{
     width: 100%;
+    height: 50vh;
     border-radius: 10px;
 } 
 .project-col img{
@@ -346,7 +354,7 @@ footer .footer-box ul li a:hover{
     text-decoration: underline;
 }
 
-@media (max-width: 768px){
+@media (max-width: 360px){
     .header{
         margin-top: -130px;
         padding-top: 30px;
@@ -358,10 +366,21 @@ footer .footer-box ul li a:hover{
         color: #000; 
         padding-top: 10px;
     }
-    .menu{
-        color: #fff;
-        display: block;
+    .nav-links ul li a{
+       display: none;
+       background-color: aquamarine;
     }
+    
+    .menu{
+        position: absolute;
+        top:55px;
+        left:300px;
+        display: block;
+        width:20px;
+        height:10px;
+        cursor: pointer;
+    }
+  
     .header .nav-links{
         position: absolute;
         top: 110%;
