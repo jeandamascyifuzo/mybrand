@@ -3,20 +3,12 @@
     padding: 0;
 }
 body{
-    background: #fff;
-    height: 100vh;
-}
-.header{
-    margin-top:-140px;
-    position: fixed;
-	min-height: 60vh; 
-	width: 100%;
-	background-position: center;
-	background-size: cover;
-    z-index: 1000;
+    overflow-x: hidden;
+    background: #cdcdcd;
 }
 nav{
 	display: flex;
+    height: 10vh;
 	padding: 2% 6%;
 	justify-content: space-between;
 	align-items: center; 
@@ -72,24 +64,19 @@ nav .logo h2{
 .menu{
     display: none;
 }
-.main{
-    margin-top: 140px;
-}
 #main {
     width: max-content;
     margin: 40px auto;
     font-family: "Segoe UI", sans-serif;
     padding: 25px 28px;
-    background: #25252d; 
-    background: #eb258fad;
+    background: rgba(255, 255, 255, 0.623); 
 }
 
 h2 {
     text-align: center;
-    font-size: 28px;
+    font-size: 18px;
     margin-bottom: 20px;
     font-weight: 400;
-    color: #fff;
 }
 .input-parent {
     display: block;
@@ -102,15 +89,16 @@ label {
     display: block;
     font-size: 16px;
     margin-bottom: 8px;
-    color: #fff;
 }
 input[type='text'], input[type='password'], input[type='email']{
     width: 100%;
     border-radius:5px;
-    height:20px;
-    outline: none;
-    border-style: none;
+    height:25px;
+    border: 1px solid;
+    border: 1px solid #000;
     text-align: center;
+    outline-style: none;
+    border: 1 solid gray;
     }
 button {
     padding: 5px 9px;
@@ -123,13 +111,11 @@ button {
     transition: 1s;
     margin-top: 15px;
     margin-bottom: 12px;
+    cursor: pointer;
 }
 button:hover {
     background-color: #FF3D55;
   }
-p{
-    color: #fff;
-}
 button p a{
     
     text-decoration: none;
@@ -141,7 +127,7 @@ footer{
     display: flex;
     justify-content: space-between;
     position: relative;
-    border-top-right-radius: 6rem;
+    /* border-top-right-radius: 3rem; */
 }
 footer .logo1{
     color: #fff;
@@ -149,6 +135,7 @@ footer .logo1{
 footer .footer-box{
     display: block;
     flex-basis: 20%;
+    margin-left: -100px;
 }
 .footer-box form{
     display: flex;
@@ -166,9 +153,11 @@ footer .footer-box h6{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
 }
+
 footer .footer-box ul li{
     list-style: none;
     margin-bottom: 1rem;
+   
 }
 footer .footer-box ul li a{
     text-decoration: none;
@@ -176,8 +165,6 @@ footer .footer-box ul li a{
     font-size: 1rem;
     transition: .5s;
     cursor: pointer;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
 }
 footer .footer-box ul li a:hover{
     text-decoration: underline;

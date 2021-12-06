@@ -7,9 +7,7 @@ body{
     background: #cdcdcd;
 }
 .header{
-    margin-top:-200px;
-    position: fixed;
-	min-height: 60vh; 
+	min-height: 20vh; 
 	width: 100%;
 	background-position: center;
 	background-size: cover;
@@ -47,9 +45,6 @@ nav{
 }
 .menu{
     display: none;
-}
-.main{
-    margin-top:200px;
 }
 .btn{
 	display: inline-block;
@@ -94,9 +89,13 @@ nav{
 .blog-col p{
    font-size: 20px;
    padding: 10px;
+   margin: 2%;
 }
 .blog-col img{
-    width: 100%;
+    width: 90%;
+    margin-left: 40px;
+    margin-top: 20px;
+    border-radius: 30px;
 }
 .row1{
 	display: flex;
@@ -125,6 +124,7 @@ nav{
     border: 1px solid #000;
     border-radius: 4px; 
     box-sizing: border-box;
+    outline-style: none;
     margin-top: 6px; 
     margin-bottom: 16px; 
     resize: vertical
@@ -180,8 +180,6 @@ footer .footer-box ul li a{
     font-size: 1rem;
     transition: .5s;
     cursor: pointer;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
 }
 footer .footer-box ul li a:hover{
     text-decoration: underline;

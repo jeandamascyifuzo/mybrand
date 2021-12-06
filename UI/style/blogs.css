@@ -7,13 +7,11 @@ body{
     background: #cdcdcd;
 }
 .header{
-    margin-top:-100px;
-    position: fixed;
-	min-height: 60vh; 
+	min-height: 35vh; 
 	width: 100%;
 	background-position: center;
 	background-size: cover;
-    z-index: 1000;
+   
 }
 .header .logo{
     font-size: 20px;
@@ -26,9 +24,6 @@ nav{
 	justify-content: space-between;
 	align-items: center; 
     background-color: #FF3D55;
-}
-nav img{
-	width: 150px
 }
 .nav-links{
      flex: 1;
@@ -57,41 +52,6 @@ nav img{
 .nav-links ul li:hover::after{
 	width: 100%;
 }
-.text-box{
-    margin-top:100px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-.text-box .left img{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border:6px solid #FFFFFF;
-    object-fit: cover;
-    margin-left: 60px;
-    margin-top: 18px;
-}
-.text-box .right{
-    width: 50%;
-    font-size: 10px;
-}
-.text-box .right h4{
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #000;
-}
-.text-box .right p{
-    text-align: justify;
-    color: #000;
-    font-size: 15px;
-    margin: 10px 0 10px;
-}
-.text-box .right span{
-    color: #5057FD;
-}
 .menu{
     position: absolute;
     top:40px;
@@ -99,7 +59,6 @@ nav img{
     display:none;
     width:20px;
     height:10px;
-    /* float: right; */
     cursor: pointer;
 }
 .btn{
@@ -121,8 +80,14 @@ nav img{
 }
 
 /* blogs */
+.blog{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    
+}
 .search{
-
     width: 80%;
     height:6vh;
 }
@@ -144,6 +109,8 @@ nav img{
     background-color:#5057FD;
     border-style: none;
     color:#FFFFFF;
+    cursor: pointer;
+    transition: .3s;
 
 }
 .search button:hover{
@@ -152,21 +119,15 @@ nav img{
 }
 .row{
 	margin-top: 5%;
-	margin-left: 5%;
+	/* margin-left: 5%; */
 	display: flex;
 	justify-content: space-between;
-}
-.blog{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 70px;
-    
 }
 .blog-col{
     flex-basis: 31%;
     border-radius: 10px;
     margin-bottom: 5%;
+    margin-right: 40px;
     text-align: left;
     /* background: #25252d; */
     background: rgba(245, 236, 236, 0.842);
@@ -267,8 +228,7 @@ footer .footer-box ul li a{
     font-size: 1rem;
     transition: .5s;
     cursor: pointer;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
+
 }
 footer .footer-box ul li a:hover{
     text-decoration: underline;
@@ -312,7 +272,7 @@ footer .footer-box ul li a:hover{
     margin: 32px 48px;
     display: block;
 }
-.text-box .left img{
+/* .text-box .left img{
    height: 200px;
    width: 200px;
    object-fit: cover;
@@ -337,7 +297,7 @@ footer .footer-box ul li a:hover{
   color: #000;
   font-weight: 600;
   font-size: 10px;
-}
+} */
 button [type="submit"]{
     width: 100px;
     background: #FF3D55;

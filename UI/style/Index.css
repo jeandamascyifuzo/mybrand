@@ -7,13 +7,10 @@ body{
     background: #cdcdcd;
 }
 .header{
-    margin-top:-100px;
-    position: fixed;
-	min-height: 60vh; 
+	min-height: 30vh; 
 	width: 100%;
 	background-position: center;
 	background-size: cover;
-    z-index: 1000;
 }
 .header .logo{
     font-size: 20px;
@@ -58,7 +55,6 @@ nav img{
 	width: 100%;
 }
 .text-box{
-    margin-top:100px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -180,7 +176,9 @@ nav img{
     border-radius: 10px;
     margin-bottom: 5%;
     text-align: left;
-    background: #FF3D55;
+    margin-right: 40px;
+    /* background: #FF3D55; */
+    background: rgba(245, 236, 236, 0.459);
  }
  .project-col h3{
      margin-top: 10px;
@@ -197,7 +195,8 @@ nav img{
     text-align: left;
     /* background: #25252d; */
     background: rgba(245, 236, 236, 0.842);
-    padding:7px
+    padding:7px;
+    margin-right: 40px;
  }
  .blog-col h3{
     margin-top: 10px;
@@ -270,6 +269,7 @@ nav img{
     border-radius: 4px; 
     box-sizing: border-box;
     margin-top: 6px; 
+    outline-style: none;
     margin-bottom: 16px; 
     resize: vertical
   }
@@ -347,8 +347,6 @@ footer .footer-box ul li a{
     font-size: 1rem;
     transition: .5s;
     cursor: pointer;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
 }
 footer .footer-box ul li a:hover{
     text-decoration: underline;
