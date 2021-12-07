@@ -89,6 +89,20 @@ text-decoration: none;
     margin-bottom: 20px;
     font-weight: 400;
 }
+form div i{
+    position:absolute;
+    padding: 10px;
+}
+.failure-icon, .error{
+    color:red;
+}
+.succes-icon{
+    color: green;
+}
+.error{
+    font-size: 15px;
+    margin-top: 5px;
+}
 .input-parent {
     display: block;
     margin-bottom: 20px;
@@ -104,7 +118,7 @@ label {
     font-size: 16px;
     margin-bottom: 8px;
 }
-input[type='text'], input[type='password']{
+input[type='email'], input[type='password']{
 width: 100%;
 border-radius:5px;
 height:30px;
@@ -115,6 +129,9 @@ outline-style: none;
 /* outline: none;
 border-style: none; */
 text-align: center;
+}
+.required{
+    color:red;
 }
 button {
     padding: 5px 9px;
@@ -132,6 +149,7 @@ button {
 }
 button:hover {
     background-color: #FF3D55;
+    opacity: 0.9;
   }
   footer{
     width: 74.8%;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
 *{
 	margin: 0;
 	padding: 0;	
@@ -354,9 +354,7 @@ footer .footer-box ul li a:hover{
 
 @media (max-width: 360px){
     .header{
-        margin-top: -130px;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 0px;
     }
     .header .logo{
         font-size: 20px;
@@ -364,6 +362,7 @@ footer .footer-box ul li a:hover{
         color: #000; 
         padding-top: 10px;
     }
+    
     .nav-links ul li a{
        display: none;
        background-color: aquamarine;
@@ -371,8 +370,8 @@ footer .footer-box ul li a:hover{
     
     .menu{
         position: absolute;
-        top:55px;
-        left:300px;
+        top:20px;
+        left:320px;
         display: block;
         width:20px;
         height:10px;
@@ -381,30 +380,24 @@ footer .footer-box ul li a:hover{
   
     .header .nav-links{
         position: absolute;
-        top: 110%;
-        right: -110%;
+        top: 10%;
+        right: -400000px;
         width: 480px;
         border-radius: 8px;
         background: #fff;
     }
-    .header .nav-links.active{
-        right: 32px;
-        transition: .4s linear;
-    }
     .header .nav-links a{
+        right: -400000px;
         font-size: 32px;
         margin: 32px 48px;
         display: block;
-    }
-    .text-box{
-        margin-top: 100px;
     }
     .text-box .left img{
        height: 300px;
        width: 300px;
        object-fit: cover;
        margin-left: 30px;
-       margin-top: 30px;
+       margin-top: 0px;
        margin-bottom: 25px;
    }
 
@@ -427,20 +420,37 @@ footer .footer-box ul li a:hover{
       font-weight: 500;
       font-size: 12px;
 }
+
 .row{
 	flex-direction: column;
 }
+.about-col img{
+    height: 250px;
+    width: 250px;
+}
+.skills-col img{
+    height: 250px;
+    width: 250px;
+}
+.project-col p, h3{
+    margin: 10px;
+}
+.blog-col p, h3{
+    margin: 10px;
+}
+
 footer{
     margin-top: 50px;
     margin-left: 50px;
     height: 80vh;
-    /* width: 800px; */
-    padding: 4rem 0 6rem;
+    padding: 2rem 0 0rem;
     flex-wrap: wrap;
+    height: 200vh;
 }
 footer .footer-box{
     flex-basis: 100%;
     text-align: center;
-    margin-bottom: 1rem;
+    padding: 20px;
+    /* margin-bottom: .8px; */
 }
 }

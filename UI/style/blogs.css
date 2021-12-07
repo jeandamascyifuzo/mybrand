@@ -11,8 +11,15 @@ body{
 	width: 100%;
 	background-position: center;
 	background-size: cover;
-   
 }
+/* .header .nav-links{
+    position: absolute;
+    top: 10%;
+    right: -200%;
+    width: 480px;
+    border-radius: 8px;
+    background: #fff;
+} */
 .header .logo{
     font-size: 20px;
     font-weight: bolder;
@@ -26,8 +33,7 @@ nav{
     background-color: #FF3D55;
 }
 .nav-links{
-     flex: 1;
-     text-align: right;
+    text-align: right;
 }
 .nav-links ul li{
 	list-style: none;
