@@ -4,7 +4,7 @@
 }
 body{
     overflow-x: hidden;
-    background: #cdcdcd;
+    background: rgba(246, 248, 248, 0.986);
 }
 nav{
 	display: flex;
@@ -69,9 +69,11 @@ nav .logo h2{
     margin: 40px auto;
     font-family: "Segoe UI", sans-serif;
     padding: 25px 28px;
-    background: rgba(255, 255, 255, 0.623); 
+    background: rgb(255, 255, 255); 
 }
-
+.required{
+    color:red;
+}
 h2 {
     text-align: center;
     font-size: 18px;
@@ -81,6 +83,20 @@ h2 {
 .input-parent {
     display: block;
     margin-bottom: 20px;
+}
+.input-parent input:focus {
+    outline: 0;
+}
+.input-parent.success input{
+    border-color: #09c372;
+}
+.input-parent.error input{
+    border-color: #ff3860;
+}
+.input-parent .error{
+    border-color: #ff3860;
+    font-size: 9px;
+    height: 13px;
 }
 .accept p a{
     text-decoration: none;
