@@ -4,7 +4,7 @@
 }
 body{
     overflow-x: hidden;
-    background: #cdcdcd;
+    background: rgba(246, 248, 248, 0.986);
 }
 nav{
     height: 10vh;
@@ -16,6 +16,8 @@ nav{
 }
 nav .logo h2{
 	color: #000;
+    font-family: poppins, sans-serif;
+    font-weight: 500;
 }
 .nav-links{
      flex: 1;
@@ -70,7 +72,7 @@ nav .logo h2{
     margin: 40px auto;
     font-family: "Segoe UI", sans-serif;
     padding: 25px 28px;
-    background: rgba(255, 255, 255, 0.623); 
+    background: rgb(255, 255, 255); 
     /* background: #eb258fad; */
     /* background-image:linear-gradient(to right bottom,#eb258fad,rgba(0, 0, 0, 0.459)),url("https://cdn.pixabay.com/photo/2014/04/23/20/32/round-330809_960_720.jpg");
     background-position: center;
@@ -93,15 +95,19 @@ form div i{
     position:absolute;
     padding: 10px;
 }
-.failure-icon, .error{
-    color:red;
+.input-parent input:focus {
+    outline: 0;
 }
-.succes-icon{
-    color: green;
+.input-parent.success input{
+    border-color: #09c372;
 }
-.error{
-    font-size: 15px;
-    margin-top: 5px;
+.input-parent.error input{
+    border-color: #ff3860;
+}
+.input-parent .error{
+    border-color: #ff3860;
+    font-size: 9px;
+    height: 13px;
 }
 .input-parent {
     display: block;
@@ -118,7 +124,7 @@ label {
     font-size: 16px;
     margin-bottom: 8px;
 }
-input[type='email'], input[type='password']{
+input[type='text'], input[type='password']{
 width: 100%;
 border-radius:5px;
 height:30px;
