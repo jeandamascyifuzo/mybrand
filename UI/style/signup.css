@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     overflow-x: hidden;
@@ -136,14 +137,15 @@ button p a{
     
     text-decoration: none;
 }
+/* footer */
 footer{
-    width: 74.8%;
+    width: 100%;
     padding: 4rem 8.5rem 0rem;
     background: #25252d;
     display: flex;
     justify-content: space-between;
     position: relative;
-    /* border-top-right-radius: 3rem; */
+    border-top-right-radius: 6rem;
 }
 footer .logo1{
     color: #fff;
@@ -151,16 +153,6 @@ footer .logo1{
 footer .footer-box{
     display: block;
     flex-basis: 20%;
-    margin-left: -100px;
-}
-.footer-box form{
-    display: flex;
-}
-.footer-box form input[type='email']{
-  border-radius: 5px 0px 0px 5px;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
 }
 footer .footer-box h6{
     font-size: 1rem;
@@ -169,11 +161,9 @@ footer .footer-box h6{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
 }
-
 footer .footer-box ul li{
     list-style: none;
     margin-bottom: 1rem;
-   
 }
 footer .footer-box ul li a{
     text-decoration: none;
@@ -184,4 +174,26 @@ footer .footer-box ul li a{
 }
 footer .footer-box ul li a:hover{
     text-decoration: underline;
+}
+input[type='email']{
+    width: 100%;
+    border-radius:5px;
+    height:35px;
+    border: 1px solid #000;
+    border-radius: 4px; 
+    outline-style: none;
+    align-items: center;
+    text-align: center;
+}
+input[type='submit']{
+    width: 60%;
+    border-radius:5px;
+    height:35px;
+    border: 1px solid #000;
+    border-radius: 4px; 
+    outline-style: none;
+    margin-top: 5px;
+    align-items: center;
+    background: #0d14d3;
+    text-align: center;
 }

@@ -2,6 +2,7 @@
 *{
 	margin: 0;
 	padding: 0;	
+    box-sizing: border-box;
 }
 body{
     background: #cdcdcd;
@@ -148,7 +149,7 @@ nav{
 
 /* footer */
 footer{
-    width: 74.6%;
+    width: 100%;
     padding: 4rem 8.5rem 0rem;
     background: #25252d;
     display: flex;
@@ -183,4 +184,25 @@ footer .footer-box ul li a{
 }
 footer .footer-box ul li a:hover{
     text-decoration: underline;
+}
+input[type='email']{
+    width: 100%;
+    border-radius:5px;
+    height:35px;
+    border: 1px solid #000;
+    border-radius: 4px; 
+    outline-style: none;
+    align-items: center;
+    text-align: center;
+}
+input[type='submit']{
+    width: 60%;
+    border-radius:5px;
+    height:35px;
+    border: 1px solid #000;
+    border-radius: 4px; 
+    outline-style: none;
+    align-items: center;
+    background: #0d14d3;
+    text-align: center;
 }
