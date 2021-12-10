@@ -2,6 +2,7 @@
 *{
 	margin: 0;
 	padding: 0;	
+    box-sizing: border-box;
 }
 body{
     background: #cdcdcd;
@@ -18,6 +19,8 @@ body{
     color: #000; 
 }
 nav{
+    font-family: poppins, sans-serif;
+    font-weight: 500;
 	display: flex;
 	padding: 2% 6%;
 	justify-content: space-between;
@@ -45,7 +48,7 @@ nav img{
 .nav-links ul li::after{
 	content: '';
 	width: 0%;
-	height: 2px;
+	height: 1.5px;
     background: #5057FD;
     display: block;
     margin: auto;
@@ -66,7 +69,7 @@ nav img{
     border-radius: 50%;
     border:6px solid #FFFFFF;
     object-fit: cover;
-    margin-left: 60px;
+    margin-left: 200px;
     margin-top: 18px;
 }
 .text-box .right{
@@ -87,8 +90,9 @@ nav img{
 }
 .text-box .right span{
     color: #5057FD;
+    
 }
-.menu{
+.menu img{
     position: absolute;
     top:40px;
     left: 200px;
@@ -135,7 +139,7 @@ nav img{
 }
 .about img{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     border-radius: 10px;
 }
  .about h3{
@@ -165,7 +169,7 @@ nav img{
     text-align: center;
     padding-top: 70px;
 }
- .skills-col, .blog-col{
+ .skills-col{
     flex-basis: 31%;
     border-radius: 10px;
     margin-bottom: 5%;
@@ -181,6 +185,8 @@ nav img{
     background: rgba(245, 236, 236, 0.459);
  }
  .project-col h3{
+     font-family: 'poppins', sans-serif;
+     font-weight: 400;
      margin-top: 10px;
      margin-bottom: 15px;
      font-size: 20px;
@@ -199,6 +205,8 @@ nav img{
     margin-right: 40px;
  }
  .blog-col h3{
+     font-family: 'poppins', sans-serif;
+     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 15px;
     text-align: left;
@@ -217,8 +225,8 @@ nav img{
 	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 .skills-col img{
-    width: 100%;
-    height: 50vh;
+    width: 80%;
+    height: 30vh;
     border-radius: 10px;
 } 
 .project-col img{
@@ -248,6 +256,20 @@ nav img{
     text-align: center;
     padding-top: 70px;
 }
+.contact-co input:focus {
+    outline: 0;
+}
+.contact-co.success input{
+    border-color: #09c372;
+}
+.contact-co.error input{
+    border-color: #ff3860;
+}
+.contact-co .error{
+    border-color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
  .contact-col{
      display: flex;
     flex-basis: 40%;
@@ -262,6 +284,9 @@ nav img{
     margin-bottom: 20px;
     margin-top: 20px;
 }
+.required{
+    color:red;
+}
  input, textarea {
     width: 100%;
     padding: 12px; 
@@ -275,15 +300,16 @@ nav img{
   }
   
   input[type=submit] {
-    padding: 10px 18px;
+    padding: 8px 10px;
     font-size: 15px;
-    background: #0d14d3;
+    background: #5057FD;
     margin: 0px 0px 10px 0px;
     width: 50%;
     color: #fff;
     outline: none;
     border-style: none;
     transition: 1s;
+    text-align: left;
   }
   input[type=submit]:hover {
     background-color: #FF3D55;
@@ -315,8 +341,10 @@ nav img{
 /* footer */
 
 footer{
-    width: 74.6%;
-    padding: 4rem 8.5rem 0rem;
+    margin-bottom: 0px;
+    width: 100%;
+    height: auto;
+    padding: 2rem 8.5rem 2rem;
     background: #25252d;
     display: flex;
     justify-content: space-between;
@@ -331,11 +359,11 @@ footer .footer-box{
     flex-basis: 20%;
 }
 footer .footer-box h6{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
     font-size: 1rem;
     color: hsl(0, 0%, 100%);
     margin-bottom: 2rem;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
 }
 footer .footer-box ul li{
     list-style: none;
@@ -350,53 +378,84 @@ footer .footer-box ul li a{
 }
 footer .footer-box ul li a:hover{
     text-decoration: underline;
+    color:#5057FD;
+}
+input[type='text']{
+    width: 100%;
+    border-radius:5px;
+    height:35px;
+    border: 1px solid #000;
+    border-radius: 4px; 
+    outline-style: none;
+    
+}
+.nav-active{
+    transform: translateX(0%) !important;
 }
 
 @media (max-width: 360px){
+    body{
+        overflow-x: hidden;
+    }
     .header{
-        padding-top: 0px;
+        min-height: 20vh; 
+        width: 100%;
+        background-position: center;
+        background-size: cover;
     }
     .header .logo{
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bolder;
         color: #000; 
-        padding-top: 10px;
+        margin-left: 20px;
     }
-    
-    .nav-links ul li a{
-       display: none;
-       background-color: aquamarine;
+    .btn{
+        display: inline-block;
+        text-decoration: none;
+        list-style: none;
+        color: #fff;
+        border: 2px solid #5057FD;
+        padding: 4px 5px;
+        background: #5057FD;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+        /* width: 30%; */
     }
-    
-    .menu{
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-links ul li{
+        text-align: center;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 55vh;
+        top: 8.5vh;
+        background-color: #FF3D55;
+        width: 25%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .menu img{
         position: absolute;
         top:20px;
-        left:320px;
+        left:280px;
         display: block;
         width:20px;
         height:10px;
         cursor: pointer;
     }
-  
-    .header .nav-links{
-        position: absolute;
-        top: 10%;
-        right: -400000px;
-        width: 480px;
-        border-radius: 8px;
-        background: #fff;
-    }
-    .header .nav-links a{
-        right: -400000px;
-        font-size: 32px;
-        margin: 32px 48px;
-        display: block;
-    }
     .text-box .left img{
-       height: 300px;
-       width: 300px;
+       height: 200px;
+       width: 200px;
        object-fit: cover;
-       margin-left: 30px;
+       margin-left: 70px;
        margin-top: 0px;
        margin-bottom: 25px;
    }
@@ -425,12 +484,16 @@ footer .footer-box ul li a:hover{
 	flex-direction: column;
 }
 .about-col img{
-    height: 250px;
+    height: 150px;
     width: 250px;
 }
 .skills-col img{
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
+   margin-left: 30px;
+}
+.project-col{
+    margin-left: 20px;
 }
 .project-col p, h3{
     margin: 10px;
@@ -438,19 +501,23 @@ footer .footer-box ul li a:hover{
 .blog-col p, h3{
     margin: 10px;
 }
-
 footer{
-    margin-top: 50px;
-    margin-left: 50px;
-    height: 80vh;
-    padding: 2rem 0 0rem;
+    margin-top: 30px;
+    padding: 4rem 0 100rem;
     flex-wrap: wrap;
-    height: 200vh;
+    height: 10px;
 }
 footer .footer-box{
+    margin-top: 50px;
     flex-basis: 100%;
     text-align: center;
-    padding: 20px;
-    /* margin-bottom: .8px; */
+    margin-bottom: 1px;
+    
+}
+.footer-box input[type="text"]{
+    width: 70%;
+}
+.footer-box input[type="submit"]{
+    width: 50%;
 }
 }

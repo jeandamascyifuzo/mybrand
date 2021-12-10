@@ -1,12 +1,15 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     overflow-x: hidden;
     background: rgba(246, 248, 248, 0.986);
 }
 nav{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
     height: 10vh;
 	display: flex;
 	padding: 2% 6%;
@@ -16,8 +19,9 @@ nav{
 }
 nav .logo h2{
 	color: #000;
-    font-family: poppins, sans-serif;
-    font-weight: 500;
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
 }
 .nav-links{
      flex: 1;
@@ -85,7 +89,8 @@ nav .logo h2{
 text-decoration: none;
 }
 .mainlog h2 {
-    
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
     text-align: center;
     font-size: 16px;
     margin-bottom: 20px;
@@ -107,11 +112,10 @@ form div i{
 .input-parent .error{
     border-color: #ff3860;
     font-size: 9px;
-    height: 13px;
 }
 .input-parent {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .input-parent a{
     text-decoration: none;
@@ -142,7 +146,7 @@ text-align: center;
 button {
     padding: 5px 9px;
     font-size: 15px;
-    background: #0d14d3;
+    background: #5057FD;
     margin: 0px 0px 10px 0px;
     width: 30%;
     color: #fff;
@@ -157,44 +161,36 @@ button:hover {
     background-color: #FF3D55;
     opacity: 0.9;
   }
-  footer{
-    width: 74.8%;
+/* footer */
+footer{
+    width: 100%;
     padding: 4rem 8.5rem 0rem;
     background: #25252d;
     display: flex;
     justify-content: space-between;
     position: relative;
-    /* border-top-right-radius: 3rem; */
+    border-top-right-radius: 6rem;
 }
 footer .logo1{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
     color: #fff;
 }
 footer .footer-box{
     display: block;
     flex-basis: 20%;
-    margin-left: -100px;
-}
-.footer-box form{
-    display: flex;
-}
-.footer-box form input[type='email']{
-  border-radius: 5px 0px 0px 5px;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
 }
 footer .footer-box h6{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
     font-size: 1rem;
     color: hsl(0, 0%, 100%);
     margin-bottom: 2rem;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
+    
 }
-
 footer .footer-box ul li{
     list-style: none;
     margin-bottom: 1rem;
-   
 }
 footer .footer-box ul li a{
     text-decoration: none;
@@ -206,4 +202,126 @@ footer .footer-box ul li a{
 footer .footer-box ul li a:hover{
     text-decoration: underline;
 }
-
+input[type='email']{
+    width: 100%;
+    border-radius:5px;
+    height:35px;
+    border: 1px solid #000;
+    border-radius: 4px; 
+    outline-style: none;
+    align-items: center;
+    text-align: center;
+}
+input[type='submit']{
+    width: 60%;
+    border-radius:5px;
+    height:35px;
+    border: 1px solid #000;
+    border-radius: 4px; 
+    outline-style: none;
+    margin-top: 5px;
+    align-items: center;
+    background: #5057FD;
+    text-align: center;
+}
+@media (max-width: 360px){
+    body{
+        overflow-x: hidden;
+    }
+    .header{
+        min-height: 10vh; 
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    .header .logo{
+        font-size: 18px;
+        font-weight: bolder;
+        color: #000; 
+        margin-left: 20px;
+    }
+    .btn{
+        display: inline-block;
+        text-decoration: none;
+        list-style: none;
+        color: #fff;
+        border: 2px solid #5057FD;
+        padding: 4px 5px;
+        background: #5057FD;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+        /* width: 30%; */
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-links ul li{
+        text-align: center;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 55vh;
+        top: 8.5vh;
+        background-color: #FF3D55;
+        width: 25%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .menu img{
+        position: absolute;
+        top:20px;
+        left:280px;
+        display: block;
+        width:20px;
+        height:10px;
+        cursor: pointer;
+    }
+    /* footer */
+    footer{
+        margin-top: 30px;
+        padding: 4rem 0 100rem;
+        flex-wrap: wrap;
+        height: 10px;
+    }
+    footer .footer-box{
+        margin-top: 50px;
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 1px;
+        
+    }
+    .footer-box input[type="text"]{
+        width: 70%;
+    }
+    .footer-box input[type="submit"]{
+        width: 50%;
+    }
+    input[type='email']{
+        width: 50%;
+        border-radius:5px;
+        height:35px;
+        border: 1px solid #000;
+        border-radius: 4px; 
+        outline-style: none;
+        align-items: center;
+        text-align: center;
+    }
+    input[type='submit']{
+        width: 30%;
+        border-radius:5px;
+        height:35px;
+        border: 1px solid #000;
+        border-radius: 4px; 
+        outline-style: none;
+        margin-top: 5px;
+        align-items: center;
+        background: #5057FD;
+        text-align: center;
+    }
+    }
