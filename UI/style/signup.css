@@ -16,6 +16,8 @@ nav{
     background-color: #FF3D55;
 }
 nav .logo h2{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
 	color: #000;
 }
 .nav-links{
@@ -81,10 +83,6 @@ h2 {
     margin-bottom: 20px;
     font-weight: 400;
 }
-.input-parent {
-    display: block;
-    margin-bottom: 20px;
-}
 .input-parent input:focus {
     outline: 0;
 }
@@ -110,7 +108,7 @@ label {
 input[type='text'], input[type='password'], input[type='email']{
     width: 100%;
     border-radius:5px;
-    height:25px;
+    height:30px;
     border: 1px solid;
     border: 1px solid #000;
     text-align: center;
@@ -120,7 +118,7 @@ input[type='text'], input[type='password'], input[type='email']{
 button {
     padding: 5px 9px;
     font-size: 15px;
-    background: #0d14d3;
+    background: #5057FD;
     width: 30%;
     outline: none;
     border-style:none;
@@ -134,13 +132,18 @@ button:hover {
     background-color: #FF3D55;
   }
 button p a{
-    
     text-decoration: none;
 }
+.nav-active{
+    transform: translateX(0%) !important;
+}
+
 /* footer */
 footer{
+    margin-top: 30px;
     width: 100%;
-    padding: 4rem 8.5rem 0rem;
+    height:auto;
+    padding: 2rem 8.5rem 0rem;
     background: #25252d;
     display: flex;
     justify-content: space-between;
@@ -148,6 +151,8 @@ footer{
     border-top-right-radius: 6rem;
 }
 footer .logo1{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
     color: #fff;
 }
 footer .footer-box{
@@ -158,7 +163,7 @@ footer .footer-box h6{
     font-size: 1rem;
     color: hsl(0, 0%, 100%);
     margin-bottom: 2rem;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'poppins',sans-serif;
     font-weight: 500;
 }
 footer .footer-box ul li{
@@ -182,18 +187,97 @@ input[type='email']{
     border: 1px solid #000;
     border-radius: 4px; 
     outline-style: none;
-    align-items: center;
-    text-align: center;
+    padding-left: 10px;
 }
 input[type='submit']{
-    width: 60%;
+    width: 50%;
     border-radius:5px;
-    height:35px;
+    height:30px;
     border: 1px solid #000;
     border-radius: 4px; 
     outline-style: none;
     margin-top: 5px;
-    align-items: center;
-    background: #0d14d3;
+    padding-left: 10px;
+    background: #5057FD;
+    text-align: left;
+    color: #fff;
+}
+
+@media (max-width: 360px){
+    body{
+        overflow-x: hidden;
+    }
+    .header{
+        min-height: 10vh; 
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    .header .logo{
+        font-size: 18px;
+        font-weight: bolder;
+        color: #000; 
+        margin-left: 20px;
+    }
+    .btn{
+        display: inline-block;
+        text-decoration: none;
+        list-style: none;
+        color: #fff;
+        border: 2px solid #5057FD;
+        padding: 4px 5px;
+        background: #5057FD;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-links ul li{
+        text-align: center;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 55vh;
+        top: 8.5vh;
+        background-color: #FF3D55;
+        width: 25%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .menu img{
+        position: absolute;
+        top:20px;
+        left:280px;
+        display: block;
+        width:20px;
+        height:10px;
+        cursor: pointer;
+    }
+
+footer{
+    margin-top: 30px;
+    padding: 4rem 0 100rem;
+    flex-wrap: wrap;
+    height: 10px;
+}
+footer .footer-box{
+    margin-top: 50px;
+    flex-basis: 100%;
     text-align: center;
+    margin-bottom: 1px;
+    
+}
+.footer-box input[type="text"]{
+    width: 70%;
+}
+.footer-box input[type="submit"]{
+    width: 50%;
+}
 }

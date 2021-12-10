@@ -13,20 +13,17 @@ body{
 	background-position: center;
 	background-size: cover;
 }
-/* .header .nav-links{
-    position: absolute;
-    top: 10%;
-    right: -200%;
-    width: 480px;
-    border-radius: 8px;
-    background: #fff;
-} */
+
 .header .logo{
     font-size: 20px;
     font-weight: bolder;
     color: #000; 
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
 }
 nav{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
 	display: flex;
 	padding: 2% 6%;
 	justify-content: space-between;
@@ -161,6 +158,8 @@ nav{
     background-color: #FF3D55;
  }
  .blog-col h3{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
      text-align: center;
     margin-top: 10px;
     margin-bottom: 15px;
@@ -202,6 +201,8 @@ footer{
     border-top-right-radius: 6rem;
 }
 footer .logo1{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
     color: #fff;
 }
 footer .footer-box{
@@ -212,8 +213,8 @@ footer .footer-box h6{
     font-size: 1rem;
     color: hsl(0, 0%, 100%);
     margin-bottom: 2rem;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
+    font-family: 'poppins',sans-serif;
+    font-weight: 400;
 }
 footer .footer-box ul li{
     list-style: none;
@@ -236,8 +237,6 @@ input[type='text']{
     border: 1px solid #000;
     border-radius: 4px; 
     outline-style: none;
-    align-items: center;
-    text-align: center;
 }
 input[type='submit']{
     width: 60%;
@@ -248,7 +247,7 @@ input[type='submit']{
     outline-style: none;
     align-items: center;
     text-align: center;
-    background: #5057FD;
+    background-color:#5057FD;
 }
 .nav-active{
     transform: translateX(0%) !important;
@@ -258,11 +257,15 @@ input[type='submit']{
 body{
     overflow-x: hidden;
     }
-.header{
-    padding-top: 0px;
-    padding-bottom: 30px;
-}
+    .header{
+        min-height: 20vh; 
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+    }
 .header .logo{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
     font-size: 20px;
     font-weight: bolder; 
     padding-top: 10px;
@@ -350,15 +353,22 @@ button [type="submit"]{
 flex-direction: column;
 }
 footer{
-    margin-left: 30px;
-    height: 100vh;
-    width: 800px;
-    padding: 4rem 0 6rem;
+    margin-top: 30px;
+    padding: 4rem 0 100rem;
     flex-wrap: wrap;
+    height: 10px;
 }
 footer .footer-box{
+    margin-top: 50px;
     flex-basis: 100%;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1px;
+    
+}
+.footer-box input[type="text"]{
+    width: 70%;
+}
+.footer-box input[type="submit"]{
+    width: 50%;
 }
 }
