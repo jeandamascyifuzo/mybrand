@@ -1,12 +1,9 @@
 
-function toggle() {
-    var navBar = document.getElementById("menu");
-    if (navBar.style.display === "block") {
-      navBar.style.display = "none";
-    } else {
-      navBar.style.display = "block";
-    }
-  }
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('.nav-links');
+menu.addEventListener('click', () =>{
+    nav.classList.toggle('nav-active');
+});
 
 
 const form = document.getElementById('main');
