@@ -18,7 +18,7 @@ body{
     font-size: 20px;
     font-weight: bolder;
     color: #000; 
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-weight: 400;
 }
 nav{
@@ -56,13 +56,14 @@ nav{
 .nav-links ul li:hover::after{
 	width: 100%;
 }
-.menu{
+.menu img{
     position: absolute;
     top:40px;
-    left: 200px;
     display:none;
     width:20px;
+    text-align: right;
     height:10px;
+    /* float: right; */
     cursor: pointer;
 }
 .btn{
@@ -187,8 +188,11 @@ nav{
 .blog-col1{
     flex-basis: 31%;
     text-align: left;
-   
  }
+ .nav-active{
+    transform: translateX(0%) !important;
+}
+
 
 /* footer */
 footer{
@@ -268,7 +272,7 @@ body{
     font-weight: 400;
     font-size: 20px;
     font-weight: bolder; 
-    padding-top: 10px;
+    padding-top: 8px;
     margin-left: 20px;
 }
 .btn{
@@ -304,8 +308,8 @@ body{
 }
 .menu img{
     position: absolute;
-    top:20px;
-    left:280px;
+    top:25px;
+    left:320px;
     display: block;
     width:20px;
     height:10px;
