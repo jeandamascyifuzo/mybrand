@@ -86,7 +86,7 @@ nav{
 
 /* blogs */
 .blog{
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
     margin-top: 10px;
@@ -124,15 +124,17 @@ nav{
 }
 .row{
 	margin-top: 5%;
-	/* margin-left: 5%; */
 	display: flex;
+     margin-left: 20px;
 	justify-content: space-between;
 }
 .blog-col{
-    flex-basis: 31%;
+   /* width: 100%; */
+    /* flex-basis: 31%; */
     border-radius: 10px;
     margin-bottom: 5%;
     margin-right: 40px;
+    
     text-align: left;
     /* background: #25252d; */
     background: rgba(245, 236, 236, 0.842);
