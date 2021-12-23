@@ -1,8 +1,42 @@
-// const menu = document.querySelector('.menu');
-// const nav = document.querySelector('.nav-links');
-// menu.addEventListener('click', () =>{
-//     nav.classList.toggle('nav-active');
-// });
+import  { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+document.getElementById("sign_up").addEventListener("click",(event)=>{
+    event.preventDefault()
+    const auth = getAuth();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+   
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user)
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+    console.log(errorMessage)
+  });
+})
+
+
+
+
+
+
+
+//==========================================================================================================================================
+
+
+// form validation
+
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('.nav-links');
+menu.addEventListener('click', () =>{
+    nav.classList.toggle('nav-active');
+});
 
 const form = document.getElementById('main');
 const email = document.getElementById('email');

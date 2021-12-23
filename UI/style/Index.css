@@ -57,6 +57,9 @@ nav img{
 .nav-links ul li:hover::after{
 	width: 100%;
 }
+.dash{
+    display: none;
+}
 .text-box{
     display: flex;
     flex-wrap: wrap;
@@ -431,7 +434,7 @@ input[type='text']{
     .nav-links{
         position: absolute;
         right: 0px;
-        height: 55vh;
+        height: 60vh;
         top: 8.5vh;
         background-color: #FF3D55;
         width: 25%;
