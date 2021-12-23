@@ -32,11 +32,69 @@ const firebaseConfig = {
  </div>
  
  </div>
- `)
+ `).join("")
 
     })
 }
 getBlogs();
 
 
+// SEARCH BLOG
 
+document.getElementById('searchbtn').addEventListener("click",()=>{
+  const searchkeyword = document.getElementById("search").value;
+  const getBlogs = () => {
+    db.collection("blog").orderBy("timestamp", 'desc').onSnapshot((snaphot) => {
+        const data = snaphot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        //   console.log("data",data.data.ImageUrl)
+
+    let searchResult;
+     if(searchkeyword!==''){
+      searchResult = data.filter((blog)=>{
+        return Object.values(blog.data).join(' ').toLowerCase().includes(searchkeyword.toLowerCase())
+      })
+     }
+
+if(searchkeyword!==''){
+  document.querySelector(".row").innerHTML =
+  searchResult.map((blogs) => `
+<div class="row fgfg">
+<div class="blog-col">
+<img id="imge" src=${blogs?.data?.ImageUrl}>
+<h3 id="header">
+${blogs?.data?.Title}
+</h3>
+<p id="paragraph">
+${blogs?.data?.content}
+</p>
+
+<button type="submit"><a href="/mybrand/UI/pages/single-blog.html">Read more...</a></button>
+</div>
+
+</div>
+`).join("")
+}else{
+  document.querySelector(".row").innerHTML =
+  data.map((blogs) => `
+<div class="row fgfg">
+<div class="blog-col">
+<img id="imge" src=${blogs?.data?.ImageUrl}>
+<h3 id="header">
+${blogs?.data?.Title}
+</h3>
+<p id="paragraph">
+${blogs?.data?.content}
+</p>
+
+<button type="submit"><a href="/mybrand/UI/pages/single-blog.html">Read more...</a></button>
+</div>
+
+</div>
+`).join("")
+}
+
+    })
+}
+getBlogs();
+
+})
