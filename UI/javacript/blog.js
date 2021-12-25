@@ -12,6 +12,22 @@ const firebaseConfig = {
   const app = firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 
+
+// READ MORE BLOGS
+
+function readMore (){
+  document.getElementById("readmore").addEventListener("click",(event)=>{
+    event.preventDefault()
+    const image = document.getElementById("imge").src;
+    const Title = document.getElementById("header").innerHTML;
+    const Paragraph = document.getElementById("paragraph").innerHTML;
+    console.log(image,Title,Paragraph);
+    localStorage.setItem("Blog",JSON.stringify({Title:Title,Image:image,Paragraph:Paragraph}))
+  })
+}
+
+
+
   const getBlogs = () => {
     db.collection("blog").orderBy("timestamp", 'desc').onSnapshot((snaphot) => {
         const data = snaphot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
@@ -28,7 +44,7 @@ const firebaseConfig = {
  ${blogs?.data?.content}
  </p>
  
- <button type="submit"><a href="/mybrand/UI/pages/single-blog.html">Read more...</a></button>
+ <button id="readmore" onclick="readMore()"><a href="/mybrand/UI/pages/single-blog.html">Read more...</a></button>
  </div>
  
  </div>
