@@ -1,10 +1,20 @@
-import  { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
-
+const firebaseConfig = {
+    apiKey: "AIzaSyA8RalzTwbiyOFjIAZ8XD0-tz5erWwZa2A",
+    authDomain: "capstone-project-2c209.firebaseapp.com",
+    projectId: "capstone-project-2c209",
+    storageBucket: "capstone-project-2c209.appspot.com",
+    messagingSenderId: "908272886510",
+    appId: "1:908272886510:web:3bbb7137663785d85709ff"
+    };
     
+    //   // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+import  { getAuth, createUserWithEmailAndPassword } from "firebase/auth";    
     document.querySelector('#signupbtn').addEventListener("click",(e)=>{
        e.preventDefault();
-    
         alert("clicked")
         const auth = getAuth();
         const email = document.getElementById('email').value;
@@ -25,7 +35,52 @@ import  { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
       });
     })
     
-    
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    
 
