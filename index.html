@@ -23,7 +23,7 @@
                     <li> <a href="#skills">SKILLS</a></li>
                     <li> <a href="#project">PROJECTS</a></li>
                     <li> <a href="UI/pages/blogs.html">BLOGS</a></li>
-                    <li> <a href="#contact">CONTACT</a></li>
+                    <li> <a href="#contacts">CONTACT</a></li>
                     <li> <a href="#" class="dash">BlogBoard</a></li>
                     <li> <a href="UI/pages/login.html" class="btn">LOG IN</a></li>
                     <li> <a href="UI/pages/signup.html" class="btn">SIGN UP</a></li>
@@ -48,7 +48,7 @@
     </section>
 
     <section id="About" class="about">
-        <h1>About me</h1>
+        <h1 class="header-primary">About me</h1>
         <div class="row">
             <div class="about-col">
                 <img src="UI/images/computer2.jpg">
@@ -86,7 +86,7 @@
     </section>
 
     <section id="skills" class="skills">
-        <h1>My Skills</h1>
+        <h1 class="header-primary">My Skills</h1>
         <div class="row">
             <div class="skills-col">
                 <img src="UI/images/html.jpg">
@@ -101,7 +101,7 @@
     </section>
     <!-- projects -->
     <section id="project" class="project">
-        <h1>My Projects</h1>
+        <h1 class="header-primary">My Projects</h1>
         <div class="row">
             <div class="project-col">
                 <img src="UI/images/1.JPG">
@@ -127,11 +127,11 @@
     <!-- blogs -->
 
     <section id="blog" class="blog">
-        <h1>My Blogs</h1>
+        <h1 class="header-primary">My Blogs</h1>
         <div class="btn2">
             <p>Recent article</p>
         </div>
-        <div class="row">
+        <div class="rowblog">
             <div class="blog-col">
                 <img src="UI/images/computer1.jpg">
                 <h3>Software Development </h3>
@@ -155,14 +155,12 @@
         </div>
         <div class="btn1"><a href="UI/pages/blogs.html" class="btn">View More</a></div>
     </section>
-    <section class="contact">
-        <h1>Contact me</h1>
+    <section class="contact" id="contacts">
+        <h1 class="header-primary">Contact me</h1>
         <div class="row">
             <div class="contact-col">
-                <form action="action" id="contacts">
-                    <div class="text">
-                        <h5>Message me</h5>
-                    </div>
+                <form action="action" id="contactForm">
+                    <div class="text"><h5>Message me</h5></div>
                     <div class="contact-co">
                         <label for="fname">Full Name <abbr class="required">*</abbr></label>
                         <input type="text" id="fname" placeholder=" type names">
@@ -179,10 +177,11 @@
                     </div>
                     <div class="contact-co">
                         <label for="message">Message <abbr class="required">*</abbr></label>
-                        <textarea id="submit" placeholder="Write something.." style="height:200px"></textarea>
+                        <textarea id="messages" placeholder="Write something.." style="height:200px"></textarea>
                     </div>
                     <input type="submit" value="Send Message">
                     <div class="error"></div>
+                    <div class="alter"> Message send</div>
                 </form>
             </div>
             <div class="contact-col">
@@ -235,6 +234,9 @@
             </form>
         </div>
     </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="UI/javacript/index.js"></script>
 </body>
 

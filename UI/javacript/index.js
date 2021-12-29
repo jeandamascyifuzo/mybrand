@@ -5,54 +5,79 @@
         });
 
 
-    const form = document.getElementById('contacts');
-    const names = document.getElementById('fname');
-    const email = document.getElementById('email');
 
+        //contact form validation and fire base
 
-    form.addEventListener('submit', e => {
-        e.preventDefault();
+//     // Initialize Firebase (ADD YOUR OWN DATA)
+const firebaseConfig = {
+    apiKey: "AIzaSyA8RalzTwbiyOFjIAZ8XD0-tz5erWwZa2A",
+    authDomain: "capstone-project-2c209.firebaseapp.com",
+    projectId: "capstone-project-2c209",
+    storageBucket: "capstone-project-2c209.appspot.com",
+    messagingSenderId: "908272886510",
+    appId: "1:908272886510:web:3bbb7137663785d85709ff"
+  };
 
-        validateInputs();
-    });
-    const setError = (element, message) => {
-        const inputControl = element.parentElement;
-        const errorDisplay = inputControl.querySelector('.error');
-        errorDisplay.innerText = message;
-        inputControl.classList.add('error');
-        inputControl.classList.remove('success')
-    }
-    const setSuccess = element => {
-        const inputControl = element.parentElement;
-        const errorDisplay = inputControl.querySelector('.error');
-        errorDisplay.innerText = '';
-        inputControl.classList.add('success');
-        inputControl.classList.remove('error');
-    };
+//   // Initialize Firebase
+ const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
 
-    const isValidEmail = email => {
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    }
+//Add information to the database
 
-    const validateInputs = () => {
-        const usernameValue = username.value.trim();
-        const emailValue = email.value.trim();
-        const passwordValue = password.value.trim();
-        const password2Value = password2.value.trim();
+  document.getElementById("contactForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = document.getElementById("fname").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("messages").value;
 
-        if(usernameValue === '') {
-            setError(names, 'Name is required');
-        }
-        else {
-            setSuccess(names);
-        }
+  const addMessage = () => {
+    db.collection("Messages").add({
+        name,
+        email,
+        subject,
+        message,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    }).then((result) => {
+        const data = result.data;
+        localStorage.setItem("contactform", data);
+        
+    }).catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+    })
+  
+    // Clear form
+    document.getElementById('contactForm').reset();
 
-        if(emailValue === '') {
-            setError(email, 'Email is required');
-        } else if (!isValidEmail(emailValue)) {
-            setError(email, 'Provide a valid email address');
-        } else {
-            setSuccess(email);
-        }
-    };
+}
+
+addMessage();    
+})
+
+// LATEST BLOGS
+const getBlogs = () => {
+    db.collection("blog").orderBy("timestamp", 'desc').onSnapshot((snaphot) => {
+        const data = snaphot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        //   console.log("data",data.data.ImageUrl)
+        document.querySelector(".rowblog").innerHTML =
+            data.slice(0,3).map((blogs) => `
+ <div class="row">
+ <div class="blog-col">
+ <img id="imge" src=${blogs?.data?.ImageUrl}>
+ <h3 id="header">
+ ${blogs?.data?.Title}
+ </h3>
+ <p id="paragraph">
+ ${blogs?.data?.content}
+ </p>
+ </div>
+ 
+ </div>
+ `).join("")
+
+    })
+}
+getBlogs();
+
+  

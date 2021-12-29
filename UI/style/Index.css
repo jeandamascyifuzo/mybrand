@@ -13,6 +13,15 @@ body{
 	background-position: center;
 	background-size: cover;
 }
+.header-primary{
+    color:#000000;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.7;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+}
 .header .logo{
     font-size: 20px;
     font-weight: bolder;
@@ -125,10 +134,11 @@ nav img{
 
 /* about me */
 .about{
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
-    padding-top: 70px;
+    padding: 70px;
+    background: rgba(252, 252, 252, 0.842);
 }
  .about-col{
     display: flex;
@@ -166,11 +176,79 @@ nav img{
 	display: flex;
 	justify-content: space-between;
 }
-.skills, .project, .blog{
-    width: 80%;
-    margin: auto;
+.rowblog{
+    width: 100%;
+	margin-top: 5%;
+	display:grid;
+    grid-template-columns: auto auto auto;
+     /* margin-left: 20px; */
+     padding: 20px;
+	/* justify-content: space-between; */
+    /* background-color: rgba(233, 223, 223, 0.842); */
+}
+.blog-col{
+   /* width: 100%; */
+    /* flex-basis: 31%; */
+    border-radius: 10px;
+    margin-bottom: 5%;
+    /* margin-right: 40px; */
+    
+    text-align: left;
+    /* background: #25252d; */
+    padding:7px;
+    cursor: pointer;
+ }
+ .blog-col button{
+    margin:10px 0px 15px 60px;
+    padding:5px;
+    width:40%;
+    border-style:none;
+    color:#fff;
+    cursor: pointer;
+    background-color: #5057FD;
+    height:30px;
+    transition: .5s;
+   
+ }
+ .blog-col button a{
+     color: #fff;
+     text-decoration: none;
+ }
+ .blog-col button:hover{
+    background-color: #FF3D55;
+ }
+ .blog-col h3{
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size:20px;
+}
+.blog-col p{
+   font-size: 16px;
+}
+ .blog-col:hover{
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.blog-col img{
+ 	width: 100%;
+     
+ 	border-radius: 10px;
+ }
+.skills, .project{
+    width: 100%;
     text-align: center;
-    padding-top: 70px;
+    padding: 70px;
+
+}
+.blog{
+    width: 100%;
+    text-align: center;
+    padding: 70px;
+    background: rgba(252, 252, 252, 0.842);
+
 }
  .skills-col{
     flex-basis: 31%;
@@ -184,6 +262,7 @@ nav img{
     margin-bottom: 5%;
     text-align: left;
     margin-right: 40px;
+    padding:7px;
     /* background: #FF3D55; */
     background: rgba(245, 236, 236, 0.459);
  }
@@ -197,27 +276,7 @@ nav img{
  .project-col p{
     font-size: 19px;
 }
-.blog-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    /* background: #25252d; */
-    background: rgba(245, 236, 236, 0.842);
-    padding:7px;
-    margin-right: 40px;
- }
- .blog-col h3{
-     font-family: 'poppins', sans-serif;
-     font-weight: 400;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    text-align: left;
-    font-size:20px;
-}
-.blog-col p{
-   font-size: 16px;
-}
+
  .skills-col:hover{
 	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
@@ -390,6 +449,12 @@ input[type='text']{
     border: 1px solid #000;
     border-radius: 4px; 
     outline-style: none;
+}
+.alter{
+    display: none;
+    color: #fff;
+    background:#5057FD;
+    text-align: left;
 }
 .nav-active{
     transform: translateX(0%) !important;
