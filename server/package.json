@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Capstone project serverSide",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeandamascyifuzo/mybrand.git"
+  },
+  "author": "cyifuzo jean damascene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeandamascyifuzo/mybrand/issues"
+  },
+  "homepage": "https://github.com/jeandamascyifuzo/mybrand#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.4",
+    "nodemon": "^2.0.15"
+  }
+}
