@@ -1,6 +1,7 @@
 const router = require("express").Router();
+// const { route } = require("express/lib/application");
 const blog = require("../models/blog");
-const User = require("../models/user");
+// const User = require("../models/user");
 
 
 //CREATE BLOG
@@ -21,6 +22,7 @@ router.post("/", async (req, res) =>{
 router.put("/:id", async (req, res) =>{
     try {
         const blog= await blog.findById(req.params.id);
+        console.log(blog)
         if(blog.username === req.body.username){
         try{
             const updatedBlog = await blog.findByIdAndUpdate(
@@ -44,7 +46,7 @@ router.put("/:id", async (req, res) =>{
 });
 
 
-//DELETE POST
+ //DELETE POST
 
 router.delete("/:id", async (req, res) =>{
     try {
@@ -65,7 +67,14 @@ router.delete("/:id", async (req, res) =>{
     } 
 });
 
-//Get users
-
+//GET POST
+router.get("/:id", async (req, res)=> {
+    try{
+        const blog = await blog.findById(req.params.id);
+        res.status(200).json(blog);
+    }catch(err){
+        res.status(500).json(err);
+    }
+});
 
 module.exports = router

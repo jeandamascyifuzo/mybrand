@@ -9,18 +9,18 @@ const blogRoute = require("./routes/blogs");
 dotenv.config();
 app.use(express.json());
 
-mongoose.connect(process.env.Mongo_url,{
+mongoose.connect(process.env.Mongo_url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     // useCreateIndex: true,
 })
-.then(console.log("connected to the Mongo_bd"))
-.catch((err)=> console.log(err));
+    .then(console.log("connected to the Mongo_bd"))
+    .catch((err) => console.log(err));
 
 app.use("/api/auth", authRoute)
 app.use("/api/users", userRoute)
 app.use("/api/blogs", blogRoute)
 
-app.listen("5000", ()=>{
+app.listen("5000", () => {
     console.log("server is running");
 })
